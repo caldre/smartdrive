@@ -1,44 +1,29 @@
-import Speed from "./components/Speed";
-import Distance from "./components/Distance";
-import SelectVehicle from "./components/SelectVehicle";
-import TripDetails from "./components/TripDetails";
+import React from "react";
+import VehicleSelection from "./components/VehicleSelection";
+import DistanceSelection from "./components/DistanceSelection";
+import SpeedSelection from "./components/SpeedSelection/SpeedSelection";
+
+import TripSummary from "./components/TripSummary/TripSummary";
 import "./App.css";
-import React, { useState } from "react";
+import CountBtn from "./components/CountBtn";
 
-const carOptions = [
-  { name: "Car A", consumption: 3 },
-  { name: "Car B", consumption: 3.5 },
-  { name: "Car C", consumption: 4 },
-];
-
-const slope = 1.009;
+export const GLOBALS = {
+  carOptions: [
+    { name: "Car A", baseConsumption: 3 },
+    { name: "Car B", baseConsumption: 3.5 },
+    { name: "Car C", baseConsumption: 4 },
+  ],
+  fuelIncrement: 1.009,
+};
 
 const App = () => {
-  const [travelDistance, setTravelDistance] = useState(250);
-  const [travelSpeed, setTravelSpeed] = useState(60);
-  const [selectedCar, setSelectedCar] = useState(carOptions[0]);
-
   return (
     <React.Fragment>
-      STATE: travelLength: {travelDistance} travelSpeed: {travelSpeed}{" "}
-      selectedCar: {selectedCar.name || "null"} <br></br>
-      <br></br>
-      <SelectVehicle
-        selectedCar={selectedCar}
-        setSelectedCar={setSelectedCar}
-        carOptions={carOptions}
-      />
-      <Speed travelSpeed={travelSpeed} setTravelSpeed={setTravelSpeed} />
-      <Distance
-        travelDistance={travelDistance}
-        setTravelDistance={setTravelDistance}
-      />
-      <TripDetails
-        travelDistance={travelDistance}
-        travelSpeed={travelSpeed}
-        selectedCar={selectedCar}
-        slope={slope}
-      />
+      <VehicleSelection />
+      <DistanceSelection />
+      <SpeedSelection />
+      <CountBtn />
+      <TripSummary />
     </React.Fragment>
   );
 };
