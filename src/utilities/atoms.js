@@ -2,7 +2,7 @@ import { atom, selector } from "recoil";
 
 export const selectedCarState = atom({
   key: "selectedCarState",
-  default: {},
+  default: "",
 });
 
 export const travelDistance = atom({
@@ -23,9 +23,9 @@ export const tripSpeed2 = atom({
 export const selectableCars = atom({
   key: "selectableCars",
   default: [
-    { id: 1, name: "Car A", baseConsumption: 3, selected: false },
-    { id: 2, name: "Car B", baseConsumption: 3.5, selected: false },
-    { id: 3, name: "Car C", baseConsumption: 4, selected: false },
+    { id: 1, name: "Car A", baseConsumption: 3, color: "#ff0055" },
+    { id: 2, name: "Car B", baseConsumption: 3.5, color: "#0099ff" },
+    { id: 3, name: "Car C", baseConsumption: 4, color: "#22cc88" },
   ],
 });
 
