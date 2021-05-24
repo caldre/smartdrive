@@ -4,8 +4,13 @@ import {
   travelDistance as distanceAtom,
   selectedCarState as carAtom,
 } from "../utilities/atoms";
-import styled from "@emotion/styled";
-import { ViewContainer } from "./styled";
+import {
+  InputCard,
+  Title,
+  SliderContainer,
+  SliderInput,
+  NumberInput,
+} from "./styled";
 
 const DistanceSelection = () => {
   const [travelDistance, setTravelDistance] = useRecoilState(distanceAtom);
@@ -16,20 +21,19 @@ const DistanceSelection = () => {
   }
 
   return (
-    <ViewContainer>
-      <h3>
-        2. Step<br></br>
-        <label htmlFor="distance">Set your travelling distance</label>
-      </h3>
+    <InputCard>
+      <Title title="2. Step" />
+      <label htmlFor="distance">Set your travelling distance</label>
+
       <SliderContainer>
-        <input
+        <SliderInput
           type="range"
           name="distance"
           min="1"
           max="2000"
           value={travelDistance}
           onChange={(e) => setTravelDistance(e.target.value)}
-        ></input>
+        ></SliderInput>
         <NumberInput
           type="number"
           value={travelDistance}
@@ -41,31 +45,8 @@ const DistanceSelection = () => {
         />
         <span>km</span>
       </SliderContainer>
-    </ViewContainer>
+    </InputCard>
   );
 };
 
 export default DistanceSelection;
-
-const SliderContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  padding: 2rem;
-`;
-
-const NumberInput = styled.input`
-  border-top-style: hidden;
-  border-right-style: hidden;
-  border-left-style: hidden;
-  border-botton-style: dotted;
-  outline: none;
-  ::-webkit-outer-spin-button,
-  ::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
-  input[type="number"] {
-    -moz-appearance: textfield;
-  }
-`;

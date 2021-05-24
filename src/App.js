@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "./components/Header";
 import VehicleSelection from "./components/VehicleSelection/VehicleSelection";
 import DistanceSelection from "./components/DistanceSelection";
 import SpeedSelection from "./components/SpeedSelection/SpeedSelection";
@@ -9,35 +10,25 @@ import CountBtn from "./components/CountBtn";
 
 import styled from "@emotion/styled";
 
-export const GLOBALS = {
-  carOptions: [
-    { name: "Car A", baseConsumption: 3 },
-    { name: "Car B", baseConsumption: 3.5 },
-    { name: "Car C", baseConsumption: 4 },
-  ],
-  fuelIncrement: 1.009,
-};
-
 const App = () => {
   return (
-    <Container>
-      <VehicleSelection />
-      <DistanceSelection />
-      <SpeedSelection />
-      <CountBtn />
-      <TripSummary />
-    </Container>
+    <React.Fragment>
+      <Container>
+        <Header />
+        <VehicleSelection />
+        <DistanceSelection />
+        <SpeedSelection />
+        <CountBtn />
+        <TripSummary />
+      </Container>
+    </React.Fragment>
   );
 };
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 100%
   align-items: center;
-
-  justify-content: center;
 `;
 
 export default App;

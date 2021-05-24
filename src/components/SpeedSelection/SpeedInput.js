@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "@emotion/styled";
+import { SliderContainer, SliderInput, NumberInput } from "../styled";
 
 const SpeedInput = ({ name, label, travelSpeed, setTravelSpeed }) => {
   return (
@@ -30,32 +30,3 @@ const SpeedInput = ({ name, label, travelSpeed, setTravelSpeed }) => {
 };
 
 export default SpeedInput;
-
-const SliderContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  padding: 2rem;
-`;
-
-const SliderInput = styled.input`
-  display: flex;
-  flex-grow: 9999;
-`;
-
-const NumberInput = styled.input`
-  display: flex;
-  flex-grow: 1;
-  border-top-style: hidden;
-  border-right-style: hidden;
-  border-left-style: hidden;
-  outline: none;
-  ::-webkit-outer-spin-button,
-  ::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
-  input[type="number"] {
-    -moz-appearance: textfield;
-  }
-`;

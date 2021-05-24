@@ -6,7 +6,7 @@ import {
 } from "../../utilities/atoms";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
-import { ViewContainer } from "../styled";
+import { InputCard, Title } from "../styled";
 
 const VehicleSelection = () => {
   const carOptions = useRecoilValue(carsAtom);
@@ -39,13 +39,12 @@ const VehicleSelection = () => {
   });
 
   return (
-    <ViewContainer>
-      <h3>
-        1. Step<br></br>
-        <label htmlFor="car">Choose your vehicle</label>
-      </h3>
+    <InputCard>
+      <Title title="1. Step" />
+      <label htmlFor="car">Choose your vehicle</label>
+
       <VehiclesContainer>{carOptionsRendered}</VehiclesContainer>
-    </ViewContainer>
+    </InputCard>
   );
 };
 
@@ -58,17 +57,17 @@ const VehiclesContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 0.25rem 0rem;
 `;
 
 const VehicleContainer = styled.div`
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  height: 6rem;
-  width: 7rem;
+  flex-shrink: 1;
+  min-height: 6rem;
+  min-width: 7rem;
   border-radius: 0.5rem;
-  margin: 0rem 0.5rem;
+  padding: 0rem 0rem;
 `;
 
 const RadioInput = styled(motion.input)`
@@ -85,12 +84,12 @@ const RadioInput = styled(motion.input)`
   background-color: var(--disabled);
   color: black;
   font-size: 1.25rem;
-
 }
 
   :before {
-  content: attr(label);
-	text-align: center;
+    content: attr(label);
+    text-align: center;
+    position: absolute;
   }
 
   :checked {
