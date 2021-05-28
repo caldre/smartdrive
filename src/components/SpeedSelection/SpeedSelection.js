@@ -4,43 +4,44 @@ import { useRecoilState } from "recoil";
 import {
   tripSpeed1 as speedAtom1,
   tripSpeed2 as speedAtom2,
+  travelDistance as distanceAtom,
 } from "../../utilities/atoms";
-import styled from "@emotion/styled";
 import { InputCard, Title } from "../styled";
+import { cardTransition, variants } from "../framerConfigs";
+import { useRecoilValue } from "recoil";
 
 const SpeedSelection = () => {
   const [travelSpeed1, setTravelSpeed1] = useRecoilState(speedAtom1);
   const [travelSpeed2, setTravelSpeed2] = useRecoilState(speedAtom2);
+  const distance = useRecoilValue(distanceAtom);
+
+  if (!distance) {
+    return null;
+  }
+
   return (
-    <InputCard>
+    <InputCard
+      initial="hidden"
+      animate="visible"
+      variants={variants}
+      transition={cardTransition}
+    >
       <Title title="3. Step" />
-      <datalist id="custom-list">
-        <option value="10"></option>
-        <option value="20"></option>
-        <option value="30"></option>
-        <option value="40"></option>
-        <option value="50"></option>
-        <option value="60"></option>
-        <option value="70"></option>
-        <option value="80"></option>
-        <option value="90"></option>
-        <option value="100"></option>
-        <option value="110"></option>
-        <option value="120"></option>
-        <option value="130"></option>
-        <option value="140"></option>
-      </datalist>
+
       <SpeedInput
         name="trip1"
         label="Set travelling speed for Trip 1"
+        min="60"
+        max="120"
         travelSpeed={travelSpeed1}
         setTravelSpeed={setTravelSpeed1}
-        list="custom-list"
       />
 
       <SpeedInput
         name="trip2"
         label="Set travelling speed for Trip 2"
+        min="60"
+        max="120"
         travelSpeed={travelSpeed2}
         setTravelSpeed={setTravelSpeed2}
       />

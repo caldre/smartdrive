@@ -1,10 +1,12 @@
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
-export const InputCard = styled.div`
+export const InputCard = styled(motion.div)`
   display: flex;
   flex-direction: column;
-  max-width: 32em;
-  margin: 4rem 0 2rem 0;
+  width: 100%;
+  max-width: 768px;
+  margin: 0.5rem 0;
   padding: 2rem;
   box-shadow: 2px 2px 10px #ccc;
   background: #fff;
@@ -17,12 +19,11 @@ export const SliderContainer = styled.div`
 `;
 
 export const SliderInput = styled.input`
-  display: flex;
   flex-grow: 1;
+  cursor: pointer;
 `;
 
 export const NumberInput = styled.input`
-  display: flex;
   border: 1px solid black;
   border-top-style: hidden;
   border-right-style: hidden;
@@ -44,3 +45,5 @@ export const Title = styled.h3`
     content: attr(title);
   }
 `;
+
+export const Meter = styled(motion.div)``;

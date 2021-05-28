@@ -12,16 +12,14 @@ import styled from "@emotion/styled";
 
 const App = () => {
   return (
-    <React.Fragment>
-      <Container>
-        <Header />
-        <VehicleSelection />
-        <DistanceSelection />
-        <SpeedSelection />
-        <CountBtn />
-        <TripSummary />
-      </Container>
-    </React.Fragment>
+    <Container>
+      <Header />
+      <VehicleSelection />
+      <DistanceSelection />
+      <SpeedSelection />
+      <CountBtn />
+      <TripSummary />
+    </Container>
   );
 };
 
@@ -29,6 +27,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
 `;
 
 export default App;

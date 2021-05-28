@@ -7,6 +7,7 @@ import {
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { InputCard, Title } from "../styled";
+import { cardTransition, variants } from "../framerConfigs";
 
 const VehicleSelection = () => {
   const carOptions = useRecoilValue(carsAtom);
@@ -39,9 +40,14 @@ const VehicleSelection = () => {
   });
 
   return (
-    <InputCard>
+    <InputCard
+      initial="hidden"
+      animate="visible"
+      variants={variants}
+      transition={cardTransition}
+    >
       <Title title="1. Step" />
-      <label htmlFor="car">Choose your vehicle</label>
+      <label htmlFor="car">Choose vehicle</label>
 
       <VehiclesContainer>{carOptionsRendered}</VehiclesContainer>
     </InputCard>
@@ -56,7 +62,7 @@ const VehiclesContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 0.25rem 0rem;
 `;
 
@@ -65,7 +71,7 @@ const VehicleContainer = styled.div`
   flex-direction: column;
   flex-shrink: 1;
   min-height: 6rem;
-  min-width: 7rem;
+  flex-basis: 1 1 7rem;
   border-radius: 0.5rem;
   padding: 0rem 0rem;
 `;

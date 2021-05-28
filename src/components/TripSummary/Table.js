@@ -1,4 +1,6 @@
 import React from "react";
+import { Meter } from "../styled";
+import Bar from "./Bar";
 
 const Table = ({ label, fuelConsumption, fuelConsumed, travelTime }) => {
   return (
@@ -15,6 +17,18 @@ const Table = ({ label, fuelConsumption, fuelConsumed, travelTime }) => {
         <tbody>
           <tr>
             <td>{travelTime}</td>
+            <Meter
+              min="3"
+              max="11.62"
+              low="6.5"
+              optimum="6"
+              high="9.5"
+              transition={{
+                duration: 2,
+              }}
+              value={fuelConsumption}
+            ></Meter>
+            <Bar value={fuelConsumption} role="fuel" />
             <td>{fuelConsumed}</td>
             <td>{fuelConsumption}</td>
           </tr>

@@ -33,12 +33,12 @@ const Button = styled.button`
   box-shadow: 0rem 0rem 0.25rem #0000002e;
 }
 
-  /* :disabled {
+  :disabled {
 
   border: 2px solid var(--ok-gradient-1);
   background: var(--disabled);
 	color: #ccc;
 	box-shadow: 0rem 0rem 0rem #0000002e;
 	text-shadow: 0rem 0rem 0rem #79485f7a;
-  } */
+  }
 `;
