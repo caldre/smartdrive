@@ -1,4 +1,4 @@
-import { atom, selector } from "recoil";
+import { atom } from "recoil";
 
 export const selectedCarState = atom({
   key: "selectedCarState",
@@ -27,16 +27,6 @@ export const selectableCars = atom({
     { id: 2, name: "Car B", baseConsumption: 3.5, color: "#0099ff" },
     { id: 3, name: "Car C", baseConsumption: 4, color: "#22cc88" },
   ],
-});
-
-const selectedCarState1 = selector({
-  key: "selectedCarState1",
-  get: ({ get }) => {
-    const carSelected = get(selectedCarState1);
-    const carList = get(selectableCars);
-
-    return carList.carSelected((car) => car.selected);
-  },
 });
 
 export const fuelIncrement = atom({

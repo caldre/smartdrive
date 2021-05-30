@@ -15,6 +15,7 @@ import {
 } from "../../utilities/atoms";
 
 const TripDetails = ({ label, travelSpeed }) => {
+  //THIS NEEDS TO BE ABOUT CHARTS ROLES: FUEL & TIME
   const selectedCar = useRecoilValue(carAtom);
   const fuelIncrement = useRecoilValue(incrementAtom);
   const travelDistance = useRecoilValue(distanceAtom);

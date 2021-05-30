@@ -1,4 +1,5 @@
 import React from "react";
+import DetailsTable from "./DetailsTable";
 import { useRecoilValue } from "recoil";
 import {
   selectedCarState as carAtom,
@@ -19,16 +20,6 @@ const TripComparison = () => {
   const travelSpeed1 = useRecoilValue(speedAtom1);
   const travelSpeed2 = useRecoilValue(speedAtom2);
   const fuelIncrement = useRecoilValue(incrementAtom);
-
-  if (
-    !travelDistance ||
-    !travelSpeed1 ||
-    !travelSpeed2 ||
-    !selectedCar ||
-    !fuelIncrement
-  ) {
-    return null;
-  }
 
   const fuelConsumed1 = countFuelConsumed(
     travelDistance,
@@ -69,8 +60,11 @@ const TripComparison = () => {
 
   return (
     <div>
-      <h3>Trip difference</h3>
-      {renderedConclusion()}
+      <details>
+        <summary>See Full Details</summary>
+        <DetailsTable />
+        <div>{renderedConclusion()}</div>
+      </details>
     </div>
   );
 };

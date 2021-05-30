@@ -5,4 +5,5 @@ export const variants = {
 
 export const cardTransition = {
   duration: 0.6,
+  delay: 0.2,
 };

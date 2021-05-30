@@ -6,8 +6,8 @@ import {
 } from "../../utilities/atoms";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
-import { InputCard, Title } from "../styled";
-import { cardTransition, variants } from "../framerConfigs";
+import { Card, Title } from "../styled";
+import { cardTransition, variants } from "../../utilities/framerConfigs";
 
 const VehicleSelection = () => {
   const carOptions = useRecoilValue(carsAtom);
@@ -40,7 +40,7 @@ const VehicleSelection = () => {
   });
 
   return (
-    <InputCard
+    <Card
       initial="hidden"
       animate="visible"
       variants={variants}
@@ -50,7 +50,7 @@ const VehicleSelection = () => {
       <label htmlFor="car">Choose vehicle</label>
 
       <VehiclesContainer>{carOptionsRendered}</VehiclesContainer>
-    </InputCard>
+    </Card>
   );
 };
 

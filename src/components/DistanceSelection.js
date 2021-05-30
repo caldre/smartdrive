@@ -5,13 +5,13 @@ import {
   selectedCarState as carAtom,
 } from "../utilities/atoms";
 import {
-  InputCard,
+  Card,
   Title,
   SliderContainer,
   SliderInput,
   NumberInput,
 } from "./styled";
-import { cardTransition, variants } from "./framerConfigs";
+import { cardTransition, variants } from "../utilities/framerConfigs";
 
 const DistanceSelection = () => {
   const [travelDistance, setTravelDistance] = useRecoilState(distanceAtom);
@@ -22,7 +22,7 @@ const DistanceSelection = () => {
   }
 
   return (
-    <InputCard
+    <Card
       initial="hidden"
       animate="visible"
       variants={variants}
@@ -65,7 +65,7 @@ const DistanceSelection = () => {
         />
         <span>km</span>
       </SliderContainer>
-    </InputCard>
+    </Card>
   );
 };
 

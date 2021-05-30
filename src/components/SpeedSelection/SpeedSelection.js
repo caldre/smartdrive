@@ -6,8 +6,8 @@ import {
   tripSpeed2 as speedAtom2,
   travelDistance as distanceAtom,
 } from "../../utilities/atoms";
-import { InputCard, Title } from "../styled";
-import { cardTransition, variants } from "../framerConfigs";
+import { Card, Title } from "../styled";
+import { cardTransition, variants } from "../../utilities/framerConfigs";
 import { useRecoilValue } from "recoil";
 
 const SpeedSelection = () => {
@@ -20,7 +20,7 @@ const SpeedSelection = () => {
   }
 
   return (
-    <InputCard
+    <Card
       initial="hidden"
       animate="visible"
       variants={variants}
@@ -45,7 +45,7 @@ const SpeedSelection = () => {
         travelSpeed={travelSpeed2}
         setTravelSpeed={setTravelSpeed2}
       />
-    </InputCard>
+    </Card>
   );
 };
 
