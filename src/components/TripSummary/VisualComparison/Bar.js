@@ -1,0 +1,58 @@
+import React from "react";
+import { motion } from "framer-motion";
+import styled from "@emotion/styled";
+import { formatTime } from "../../../utilities/helperFunctions";
+
+const Bar = ({ type, name, max, value }) => {
+  return (
+    <BarContainer>
+      <Value>{type === "time" ? formatTime(value) : value + "l"}</Value>
+      <BarBorder>
+        <BarValue
+          height={`${(100 * value) / max}%`}
+          animate={{ xHeight: 100 }}
+          transition={{
+            type: "spring",
+            stiffness: 7000,
+            damping: 30,
+          }}
+        ></BarValue>
+      </BarBorder>
+      <Name>{name}</Name>
+    </BarContainer>
+  );
+};
+
+export default Bar;
+
+const BarContainer = styled.div``;
+
+const Value = styled.p`
+  transform: rotate(-30deg);
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+`;
+
+const BarBorder = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100px;
+  width: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px 3px 0 0;
+`;
+
+const BarValue = styled(motion.div)(
+  {
+    width: "10px",
+    background:
+      "linear-gradient(45deg, var(--lightgreen-1), var(--lightgreen-2))",
+  },
+  (props) => ({ height: props.height })
+);
+
+const Name = styled.p`
+  text-transform: uppercase;
+  font-size: 0.8rem;
+`;

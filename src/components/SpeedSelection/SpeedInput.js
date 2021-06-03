@@ -13,9 +13,9 @@ const SpeedInput = ({ name, label, min, max, travelSpeed, setTravelSpeed }) => {
           max={max}
           value={travelSpeed}
           onChange={(e) => setTravelSpeed(e.target.value)}
-          list="tickmarks"
+          list="km/h"
         ></SliderInput>
-        <datalist id="tickmarks">
+        <datalist id="km/h">
           <option value="10"></option>
           <option value="20"></option>
           <option value="30"></option>

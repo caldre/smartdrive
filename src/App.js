@@ -3,12 +3,10 @@ import Header from "./components/Header";
 import VehicleSelection from "./components/VehicleSelection/VehicleSelection";
 import DistanceSelection from "./components/DistanceSelection";
 import SpeedSelection from "./components/SpeedSelection/SpeedSelection";
-
 import TripSummary from "./components/TripSummary/TripSummary";
-import "./App.css";
-import CountBtn from "./components/CountBtn";
 
 import styled from "@emotion/styled";
+import "./App.css";
 
 const App = () => {
   return (
@@ -17,7 +15,6 @@ const App = () => {
       <VehicleSelection />
       <DistanceSelection />
       <SpeedSelection />
-      <CountBtn />
       <TripSummary />
     </Container>
   );
@@ -26,8 +23,10 @@ const App = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
   align-items: center;
   height: 100vh;
+  background-image: linear-gradient(#fff, #eee);
 `;
 
 export default App;

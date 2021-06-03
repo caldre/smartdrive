@@ -1,19 +1,19 @@
 import React from "react";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import {
-  selectedCarState as carAtom,
-  selectableCars as carsAtom,
-} from "../../utilities/atoms";
+  selectedCarState as selectedCarAtom,
+  selectableCarsState as selectableCarsAtom,
+} from "../../utilities/recoilState";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { Card, Title } from "../styled";
 import { cardTransition, variants } from "../../utilities/framerConfigs";
 
 const VehicleSelection = () => {
-  const carOptions = useRecoilValue(carsAtom);
-  const setSelectedCar = useSetRecoilState(carAtom);
+  const selectableCars = useRecoilValue(selectableCarsAtom);
+  const setSelectedCar = useSetRecoilState(selectedCarAtom);
 
-  const carOptionsRendered = carOptions.map((car) => {
+  const carOptionsRendered = selectableCars.map((car) => {
     return (
       <VehicleContainer key={car.name}>
         <RadioInput
@@ -85,7 +85,7 @@ const RadioInput = styled(motion.input)`
   appearance: none;
   outline: none;
   cursor: pointer;
-  border: 2px solid var(--ok-gradient-1);
+  border: 2px solid var(--lightgreen-1);
   border-radius: 0.25rem;
   background-color: var(--disabled);
   color: black;
@@ -100,7 +100,7 @@ const RadioInput = styled(motion.input)`
 
   :checked {
   border: 0px solid black;
-  background: linear-gradient(45deg, var(--ok-gradient-1), var(--ok-gradient-2));
+  background: linear-gradient(45deg, var(--lightgreen-1), var(--lightgreen-2));
 	color: #fff;
 	box-shadow: 0rem 0rem 0.25rem #0000002e;
 	text-shadow: 0.05rem 0.1rem 0rem #79485f7a;

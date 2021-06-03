@@ -1,9 +1,10 @@
 import React from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
-  travelDistance as distanceAtom,
+  travelDistanceState as distanceAtom,
   selectedCarState as carAtom,
-} from "../utilities/atoms";
+  userConfigsState as configsAtom,
+} from "../utilities/recoilState";
 import {
   Card,
   Title,
@@ -16,6 +17,7 @@ import { cardTransition, variants } from "../utilities/framerConfigs";
 const DistanceSelection = () => {
   const [travelDistance, setTravelDistance] = useRecoilState(distanceAtom);
   const selectedCar = useRecoilValue(carAtom);
+  const userConfigs = useRecoilValue(configsAtom);
 
   if (!selectedCar) {
     return null;
@@ -35,8 +37,8 @@ const DistanceSelection = () => {
         <SliderInput
           type="range"
           name="distance"
-          min="1"
-          max="1000"
+          min={userConfigs.minDistance}
+          max={userConfigs.maxDistance}
           value={travelDistance}
           onChange={(e) => setTravelDistance(e.target.value)}
           list="km-ticks"
@@ -58,10 +60,10 @@ const DistanceSelection = () => {
           type="number"
           value={travelDistance}
           onChange={(e) => setTravelDistance(e.target.value)}
-          min="1"
-          max="1000"
+          min={userConfigs.minDistance}
+          max={userConfigs.maxDistance}
           name="distance"
-          placeholder="1 - 1000"
+          placeholder={`${userConfigs.minDistance} - ${userConfigs.maxDistance}`}
         />
         <span>km</span>
       </SliderContainer>

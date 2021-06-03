@@ -1,6 +1,6 @@
 :root {
-  --ok-gradient-1: #00e673;
-  --ok-gradient-2: #00cc66;
+  --lightgreen-1: #716ad1;
+  --lightgreen-2: #c5c4ff;
   --disabled: rgb(255, 255, 255);
 }
 
@@ -18,4 +18,8 @@
 
 datalist {
   display: inline-flex;
+}
+
+td {
+  text-align: right;
 }
