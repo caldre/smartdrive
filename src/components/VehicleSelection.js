@@ -31,10 +31,7 @@ const VehicleSelection = () => {
             damping: 30,
           }}
         ></RadioInput>
-        <Details>
-          Base consumption:<br></br>
-          {car.baseConsumption}l/100km
-        </Details>
+        <Details>{car.baseConsumption}l/100km</Details>
       </VehicleContainer>
     );
   });
@@ -73,7 +70,7 @@ const VehicleContainer = styled.div`
   flex-direction: column;
   flex-shrink: 1;
   min-height: 5rem;
-  width: 7rem;
+  width: 6rem;
   border-radius: 0.5rem;
 `;
 
@@ -108,6 +105,6 @@ const RadioInput = styled(motion.input)`
 `;
 
 const Details = styled.span`
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   margin: 0rem 0.25rem;
 `;
