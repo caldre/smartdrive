@@ -6,7 +6,7 @@ import {
 } from "../../utilities/recoilState";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
-import { Card, Title } from "../styled";
+import { Card, ContentContainer, Title } from "../styled";
 import { cardTransition, variants } from "../../utilities/framerConfigs";
 
 const VehicleSelection = () => {
@@ -46,10 +46,12 @@ const VehicleSelection = () => {
       variants={variants}
       transition={cardTransition}
     >
-      <Title title="1. Step" />
-      <label htmlFor="car">Choose vehicle</label>
+      <ContentContainer>
+        <Title title="1. Step" />
+        <label htmlFor="car">Choose vehicle</label>
 
-      <VehiclesContainer>{carOptionsRendered}</VehiclesContainer>
+        <VehiclesContainer>{carOptionsRendered}</VehiclesContainer>
+      </ContentContainer>
     </Card>
   );
 };

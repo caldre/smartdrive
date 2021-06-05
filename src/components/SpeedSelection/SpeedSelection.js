@@ -7,7 +7,7 @@ import {
   travelSpeedState2 as speedAtom2,
   travelDistanceState as distanceAtom,
 } from "../../utilities/recoilState";
-import { Card, Title } from "../styled";
+import { Card, ContentContainer, Title } from "../styled";
 import { cardTransition, variants } from "../../utilities/framerConfigs";
 import { useRecoilValue } from "recoil";
 
@@ -28,25 +28,27 @@ const SpeedSelection = () => {
       variants={variants}
       transition={cardTransition}
     >
-      <Title title="3. Step" />
+      <ContentContainer>
+        <Title title="3. Step" />
 
-      <SpeedInput
-        name="trip1"
-        label="Set travelling speed for Trip 1"
-        min={userConfig.minSpeed}
-        max={userConfig.maxSpeed}
-        travelSpeed={travelSpeed1}
-        setTravelSpeed={setTravelSpeed1}
-      />
+        <SpeedInput
+          name="trip1"
+          label="Set travelling speed for Trip 1"
+          min={userConfig.minSpeed}
+          max={userConfig.maxSpeed}
+          travelSpeed={travelSpeed1}
+          setTravelSpeed={setTravelSpeed1}
+        />
 
-      <SpeedInput
-        name="trip2"
-        label="Set travelling speed for Trip 2"
-        min={userConfig.minSpeed}
-        max={userConfig.maxSpeed}
-        travelSpeed={travelSpeed2}
-        setTravelSpeed={setTravelSpeed2}
-      />
+        <SpeedInput
+          name="trip2"
+          label="Set travelling speed for Trip 2"
+          min={userConfig.minSpeed}
+          max={userConfig.maxSpeed}
+          travelSpeed={travelSpeed2}
+          setTravelSpeed={setTravelSpeed2}
+        />
+      </ContentContainer>
     </Card>
   );
 };

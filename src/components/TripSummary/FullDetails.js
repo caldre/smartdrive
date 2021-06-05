@@ -24,10 +24,10 @@ const FullDetails = () => {
       <summary>See Full Details</summary>
       <Table>
         <Th colSpan="2"></Th>
-        <Th scope="col" style={{ textAlign: "center" }}>
+        <Th scope="col" style={{ textAlign: "right" }}>
           Trip 1
         </Th>
-        <Th scope="col" style={{ textAlign: "center" }}>
+        <Th scope="col" style={{ textAlign: "right" }}>
           Trip 2
         </Th>
         <tr>
@@ -58,7 +58,7 @@ const FullDetails = () => {
         </tr>
         <tr>
           <Th scope="row">Total Fuel Consumed</Th>
-          <Th>(l)</Th>
+          <Th>(liters)</Th>
           <Td>{trip1.totalFuelConsumption}</Td>
           <Td>{trip2.totalFuelConsumption}</Td>
         </tr>

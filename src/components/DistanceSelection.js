@@ -11,6 +11,7 @@ import {
   SliderContainer,
   SliderInput,
   NumberInput,
+  ContentContainer,
 } from "./styled";
 import { cardTransition, variants } from "../utilities/framerConfigs";
 
@@ -30,43 +31,45 @@ const DistanceSelection = () => {
       variants={variants}
       transition={cardTransition}
     >
-      <Title title="2. Step" />
-      <label htmlFor="distance">Set travelling distance</label>
+      <ContentContainer>
+        <Title title="2. Step" />
+        <label htmlFor="distance">Set travelling distance</label>
 
-      <SliderContainer>
-        <SliderInput
-          type="range"
-          name="distance"
-          min={userConfigs.minDistance}
-          max={userConfigs.maxDistance}
-          value={travelDistance}
-          onChange={(e) => setTravelDistance(e.target.value)}
-          list="km-ticks"
-        ></SliderInput>
-        <datalist id="km-ticks">
-          <option value="1"></option>
-          <option value="100"></option>
-          <option value="200"></option>
-          <option value="300"></option>
-          <option value="400"></option>
-          <option value="500"></option>
-          <option value="600"></option>
-          <option value="700"></option>
-          <option value="800"></option>
-          <option value="900"></option>
-          <option value="1000"></option>
-        </datalist>
-        <NumberInput
-          type="number"
-          value={travelDistance}
-          onChange={(e) => setTravelDistance(e.target.value)}
-          min={userConfigs.minDistance}
-          max={userConfigs.maxDistance}
-          name="distance"
-          placeholder={`${userConfigs.minDistance} - ${userConfigs.maxDistance}`}
-        />
-        <span>km</span>
-      </SliderContainer>
+        <SliderContainer>
+          <SliderInput
+            type="range"
+            name="distance"
+            min={userConfigs.minDistance}
+            max={userConfigs.maxDistance}
+            value={travelDistance}
+            onChange={(e) => setTravelDistance(e.target.value)}
+            list="km-ticks"
+          ></SliderInput>
+          <datalist id="km-ticks">
+            <option value="1"></option>
+            <option value="100"></option>
+            <option value="200"></option>
+            <option value="300"></option>
+            <option value="400"></option>
+            <option value="500"></option>
+            <option value="600"></option>
+            <option value="700"></option>
+            <option value="800"></option>
+            <option value="900"></option>
+            <option value="1000"></option>
+          </datalist>
+          <NumberInput
+            type="number"
+            value={travelDistance}
+            onChange={(e) => setTravelDistance(e.target.value)}
+            min={userConfigs.minDistance}
+            max={userConfigs.maxDistance}
+            name="distance"
+            placeholder={`${userConfigs.minDistance} - ${userConfigs.maxDistance}`}
+          />
+          <span>km</span>
+        </SliderContainer>
+      </ContentContainer>
     </Card>
   );
 };

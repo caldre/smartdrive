@@ -8,9 +8,15 @@ export const Card = styled(motion.div)`
   max-width: 768px;
   width: 100%;
   margin: 0.5rem 0;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   box-shadow: 2px 2px 10px #ccc;
   background: rgb(255, 255, 255, 0.8);
+`;
+
+export const ContentContainer = styled.div`
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 1rem;
 `;
 
 export const SliderContainer = styled.div`
@@ -53,8 +59,7 @@ export const ComparisonContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
-  max-width: 350px;
+  width: 350px;
   border-bottom: thin solid #ccc;
   margin-bottom: 2rem;
 `;

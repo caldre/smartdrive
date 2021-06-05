@@ -3,7 +3,7 @@ import FuelComparison from "./VisualComparison/FuelComparison";
 import TimeComparison from "./VisualComparison/TimeComparison";
 import Conclusion from "./Conclusion";
 import styled from "@emotion/styled";
-import { Card } from "../styled";
+import { Card, ContentContainer } from "../styled";
 import { variants, cardTransition } from "../../utilities/framerConfigs";
 import FullDetails from "./FullDetails.js";
 import { useRecoilValue } from "recoil";
@@ -22,12 +22,14 @@ const TripSummary = () => {
       variants={variants}
       transition={cardTransition}
     >
-      <VisualComparison>
-        <TimeComparison />
-        <FuelComparison />
-        <Conclusion />
-      </VisualComparison>
-      <FullDetails />
+      <ContentContainer>
+        <VisualComparison>
+          <TimeComparison />
+          <FuelComparison />
+          <Conclusion />
+        </VisualComparison>
+        <FullDetails />
+      </ContentContainer>
     </Card>
   ) : null;
 };
