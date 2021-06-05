@@ -80,11 +80,19 @@ export default FullDetails;
 const Table = styled.table`
   margin-top: 2rem;
   border-collapse: collapse;
+  cursor: default;
+
+  tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #ddd;
+  }
 `;
 
 const Th = styled.th`
-  background-color: var(--lightgreen-1);
-  color: #ffffff;
+  font-weight: normal;
   text-align: left;
   padding: 0rem 1rem;
 `;
@@ -93,3 +101,7 @@ const Td = styled.td`
   text-align: right;
   padding: 0 1rem;
 `;
+
+// #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+// #customers tr:hover {background-color: #ddd;}
