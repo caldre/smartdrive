@@ -4,9 +4,8 @@ import { motion } from "framer-motion";
 export const Card = styled(motion.div)`
   display: flex;
   flex-direction: column;
-  flex-shrink: 1;
   max-width: 768px;
-  width: 100%;
+  width: 80%;
   margin: 0.5rem 0;
   padding: 0.5rem 2rem;
   box-shadow: 2px 2px 10px #ccc;
@@ -14,6 +13,7 @@ export const Card = styled(motion.div)`
 `;
 
 export const ContentContainer = styled.div`
+  max-width: 768px;
   flex-wrap: wrap;
   padding: 0rem 1rem;
 `;

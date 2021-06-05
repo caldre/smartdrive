@@ -26,8 +26,8 @@ const TripSummary = () => {
         <VisualComparison>
           <TimeComparison />
           <FuelComparison />
-          <Conclusion />
         </VisualComparison>
+        <Conclusion />
         <FullDetails />
       </ContentContainer>
     </Card>

@@ -73,6 +73,7 @@ const VehicleContainer = styled.div`
   flex-direction: column;
   flex-shrink: 1;
   min-height: 5rem;
+  width: 8em;
   border-radius: 0.5rem;
   padding: 0rem 0rem;
 `;
@@ -81,7 +82,6 @@ const RadioInput = styled(motion.input)`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   height: 100%;
   appearance: none;
   outline: none;
