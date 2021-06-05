@@ -3,11 +3,11 @@ import { useRecoilValue, useSetRecoilState } from "recoil";
 import {
   selectedCarState as selectedCarAtom,
   selectableCarsState as selectableCarsAtom,
-} from "../../utilities/recoilState";
+} from "../utilities/recoilState";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
-import { Card, ContentContainer, Title } from "../styled";
-import { cardTransition, variants } from "../../utilities/framerConfigs";
+import { Card, ContentContainer, Title } from "./styled";
+import { cardTransition, variants } from "../utilities/framerConfigs";
 
 const VehicleSelection = () => {
   const selectableCars = useRecoilValue(selectableCarsAtom);
@@ -86,7 +86,7 @@ const RadioInput = styled(motion.input)`
   appearance: none;
   outline: none;
   cursor: pointer;
-  border: 2px solid var(--lightgreen-1);
+  border: 2px solid var(--gradient-1);
   border-radius: 0.25rem;
   background-color: var(--disabled);
   color: black;
@@ -101,7 +101,7 @@ const RadioInput = styled(motion.input)`
 
   :checked {
   border: 0px solid black;
-  background: linear-gradient(45deg, var(--lightgreen-1), var(--lightgreen-2));
+  background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
 	color: #fff;
 	box-shadow: 0rem 0rem 0.25rem #0000002e;
 	text-shadow: 0.05rem 0.1rem 0rem #79485f7a;

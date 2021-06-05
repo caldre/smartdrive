@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./components/Header";
-import VehicleSelection from "./components/VehicleSelection/VehicleSelection";
+import VehicleSelection from "./components/VehicleSelection";
 import DistanceSelection from "./components/DistanceSelection";
 import SpeedSelection from "./components/SpeedSelection/SpeedSelection";
 import TripSummary from "./components/TripSummary/TripSummary";

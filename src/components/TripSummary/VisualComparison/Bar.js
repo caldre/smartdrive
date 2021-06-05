@@ -52,8 +52,7 @@ const BarBorder = styled.div`
 const BarValue = styled(motion.div)(
   {
     width: "10px",
-    background:
-      "linear-gradient(45deg, var(--lightgreen-1), var(--lightgreen-2))",
+    background: "linear-gradient(45deg, var(--gradient-1), var(--gradient-2))",
   },
   (props) => ({ height: props.height })
 );

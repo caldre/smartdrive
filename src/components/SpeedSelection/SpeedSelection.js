@@ -30,7 +30,6 @@ const SpeedSelection = () => {
     >
       <ContentContainer>
         <Title title="3. Step" />
-
         <SpeedInput
           name="trip1"
           label="Set travelling speed for Trip 1"
@@ -39,7 +38,6 @@ const SpeedSelection = () => {
           travelSpeed={travelSpeed1}
           setTravelSpeed={setTravelSpeed1}
         />
-
         <SpeedInput
           name="trip2"
           label="Set travelling speed for Trip 2"

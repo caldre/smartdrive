@@ -23,53 +23,51 @@ const FullDetails = () => {
     <details>
       <summary>See Full Details</summary>
       <Table>
-        <Th colSpan="2"></Th>
-        <Th scope="col" style={{ textAlign: "right" }}>
-          Trip 1
-        </Th>
-        <Th scope="col" style={{ textAlign: "right" }}>
-          Trip 2
-        </Th>
-        <tr>
-          <Th colSpan="2" scope="row">
-            Selected Car
-          </Th>
-
-          <Td>{selectedCar.name}</Td>
-          <Td>{selectedCar.name}</Td>
-        </tr>
-        <tr>
-          <Th scope="row">Travel Distance</Th>
-          <Th>(km)</Th>
-          <Td>{travelDistance}</Td>
-          <Td>{travelDistance}</Td>
-        </tr>
-        <tr>
-          <Th scope="row">Speed</Th>
-          <Th>(km/h)</Th>
-          <Td>{travelSpeed1}</Td>
-          <Td>{travelSpeed2}</Td>
-        </tr>
-        <tr>
-          <Th scope="row">Fuel Consumption</Th>
-          <Th>(l/100km)</Th>
-          <Td>{trip1.litersPer100km}</Td>
-          <Td>{trip2.litersPer100km}</Td>
-        </tr>
-        <tr>
-          <Th scope="row">Total Fuel Consumed</Th>
-          <Th>(liters)</Th>
-          <Td>{trip1.totalFuelConsumption}</Td>
-          <Td>{trip2.totalFuelConsumption}</Td>
-        </tr>
-        <tr>
-          <Th colSpan="2" scope="row">
-            Time Consumed
-          </Th>
-
-          <Td>{formatTime(trip1.travelTimeInMs)}</Td>
-          <Td>{formatTime(trip2.travelTimeInMs)}</Td>
-        </tr>
+        <thead>
+          <tr>
+            <Th colSpan="2"></Th>
+            <Th>Trip 1</Th>
+            <Th>Trip 2</Th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <Td>Selected Car</Td>
+            <Td></Td>
+            <Td>{selectedCar.name}</Td>
+            <Td>{selectedCar.name}</Td>
+          </tr>
+          <tr>
+            <Td>Travel Distance</Td>
+            <Td>(km)</Td>
+            <Td>{travelDistance}</Td>
+            <Td>{travelDistance}</Td>
+          </tr>
+          <tr>
+            <Td>Speed</Td>
+            <Td>(km/h)</Td>
+            <Td>{travelSpeed1}</Td>
+            <Td>{travelSpeed2}</Td>
+          </tr>
+          <tr>
+            <Td>Fuel Consumption</Td>
+            <Td>(l/100km)</Td>
+            <Td>{trip1.litersPer100km}</Td>
+            <Td>{trip2.litersPer100km}</Td>
+          </tr>
+          <tr>
+            <Td>Total Fuel Consumed</Td>
+            <Td>(liters)</Td>
+            <Td>{trip1.totalFuelConsumption}</Td>
+            <Td>{trip2.totalFuelConsumption}</Td>
+          </tr>
+          <tr>
+            <Td>Time Consumed</Td>
+            <Td></Td>
+            <Td>{formatTime(trip1.travelTimeInMs)}</Td>
+            <Td>{formatTime(trip2.travelTimeInMs)}</Td>
+          </tr>
+        </tbody>
       </Table>
     </details>
   );
@@ -78,13 +76,14 @@ const FullDetails = () => {
 export default FullDetails;
 
 const Table = styled.table`
+  margin: 0 auto;
   margin-top: 2rem;
   padding: 1rem;
   font-size: 0.8rem;
   border-collapse: collapse;
   cursor: default;
 
-  tr:nth-of-type(odd) {
+  tr:nth-of-type(even) {
     background-color: #f2f2f2;
   }
 
@@ -94,8 +93,10 @@ const Table = styled.table`
 `;
 
 const Th = styled.th`
+  background: var(--gradient-1);
+  color: white;
   font-weight: normal;
-  text-align: left;
+  text-align: right;
   padding: 0rem 1rem;
 `;
 

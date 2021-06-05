@@ -15,8 +15,7 @@ export const Card = styled(motion.div)`
 
 export const ContentContainer = styled.div`
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 1rem;
+  padding: 0rem 1rem;
 `;
 
 export const SliderContainer = styled.div`
