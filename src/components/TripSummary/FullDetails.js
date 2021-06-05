@@ -23,8 +23,7 @@ const FullDetails = () => {
     <details>
       <summary>See Full Details</summary>
       <Table>
-        <Th></Th>
-        <Th></Th>
+        <Th colSpan="2"></Th>
         <Th scope="col" style={{ textAlign: "center" }}>
           Trip 1
         </Th>

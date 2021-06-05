@@ -25,10 +25,16 @@ const Bar = ({ type, name, max, value }) => {
 
 export default Bar;
 
-const BarContainer = styled.div``;
+const BarContainer = styled.div`
+  position: relative;
+  align-self: flex-end;
+`;
 
 const Value = styled.p`
-  transform: rotate(-30deg);
+  position: absolute;
+  top: -2.2rem;
+  width: 80px;
+  transform: rotate(-25deg);
   font-size: 0.8rem;
   margin-bottom: 1rem;
 `;
@@ -53,6 +59,9 @@ const BarValue = styled(motion.div)(
 );
 
 const Name = styled.p`
+  position: absolute;
+  left: -0.7rem;
+  width: 80px;
   text-transform: uppercase;
   font-size: 0.8rem;
 `;

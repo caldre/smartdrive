@@ -29,7 +29,6 @@ const FuelComparison = () => {
             trip1.totalFuelConsumption - trip2.totalFuelConsumption
           )}
         />
-
         <Bar
           type="fuel"
           name={trip1.name}

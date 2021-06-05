@@ -25,13 +25,12 @@ export default QuickStats;
 const Stats = styled.div`
   display: flex;
   flex-direction: column;
+  width: 6rem;
   align-items: center;
   font-size: 0.8rem;
 `;
 
-const H3 = styled.h3`
-  margin-bottom: 1rem;
-`;
+const H3 = styled.h3``;
 
 const Stamp = styled.div`
 margin-top: 1rem;

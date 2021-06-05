@@ -8,7 +8,7 @@ export const Card = styled(motion.div)`
   max-width: 768px;
   width: 100%;
   margin: 0.5rem 0;
-  padding: 2rem;
+  padding: 1rem 2rem;
   box-shadow: 2px 2px 10px #ccc;
   background: rgb(255, 255, 255, 0.8);
 `;
@@ -16,7 +16,7 @@ export const Card = styled(motion.div)`
 export const SliderContainer = styled.div`
   display: flex;
   flex-direction: row;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 `;
 
 export const SliderInput = styled.input`

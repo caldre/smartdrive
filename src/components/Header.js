@@ -21,7 +21,6 @@ const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  height: 80px;
   width: 100vw;
   background: rgb(255, 255, 255, 0.8);
   margin-bottom: 0.5rem;
