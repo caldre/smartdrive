@@ -5,17 +5,17 @@ export const Card = styled(motion.div)`
   display: flex;
   flex-direction: column;
   max-width: 768px;
-  width: 80%;
+  width: 90%;
   margin: 0.5rem 0;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   box-shadow: 2px 2px 10px #ccc;
   background: rgb(255, 255, 255, 0.8);
 `;
 
 export const ContentContainer = styled.div`
   max-width: 768px;
+  width: 100%;
   flex-wrap: wrap;
-  padding: 0rem 1rem;
 `;
 
 export const SliderContainer = styled.div`
