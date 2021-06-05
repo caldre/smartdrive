@@ -78,7 +78,7 @@ export default FullDetails;
 const Table = styled.table`
   margin: 0 auto;
   margin-top: 2rem;
-  padding: 1rem;
+  padding: 0rem;
   font-size: 0.8rem;
   border-collapse: collapse;
   cursor: default;
@@ -102,5 +102,5 @@ const Th = styled.th`
 
 const Td = styled.td`
   text-align: right;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
 `;
