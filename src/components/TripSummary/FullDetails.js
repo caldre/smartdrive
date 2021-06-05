@@ -101,7 +101,3 @@ const Td = styled.td`
   text-align: right;
   padding: 0 1rem;
 `;
-
-// #customers tr:nth-child(even){background-color: #f2f2f2;}
-
-// #customers tr:hover {background-color: #ddd;}
