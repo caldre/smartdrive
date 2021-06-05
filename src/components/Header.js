@@ -19,6 +19,7 @@ const Container = styled.div`
   padding: 0rem 2rem;
   flex-direction: row;
   align-items: center;
+  max-width: 768px;
   width: 100%;
   justify-content: space-evenly;
   background: rgb(255, 255, 255, 0.8);

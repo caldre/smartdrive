@@ -79,10 +79,12 @@ export default FullDetails;
 
 const Table = styled.table`
   margin-top: 2rem;
+  padding: 1rem;
+  font-size: 0.8rem;
   border-collapse: collapse;
   cursor: default;
 
-  tr:nth-child(odd) {
+  tr:nth-of-type(odd) {
     background-color: #f2f2f2;
   }
 

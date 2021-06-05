@@ -23,9 +23,8 @@ const App = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  align-items: center;
   height: 100vh;
+  align-items: center;
   background-image: linear-gradient(#fff, #eee);
 `;
 

@@ -72,8 +72,7 @@ const VehicleContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex-shrink: 1;
-  min-height: 6rem;
-  flex-basis: 1 1 7rem;
+  min-height: 5rem;
   border-radius: 0.5rem;
   padding: 0rem 0rem;
 `;
