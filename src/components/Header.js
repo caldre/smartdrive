@@ -4,9 +4,9 @@ import { Card, ContentContainer } from "./styled";
 
 const Header = () => {
   return (
-    <Card>
+    <Card style={{ background: "var(--neutral-4)" }}>
       <ContentContainer>
-        <h1>Drive Smarter</h1>
+        <h1 style={{ color: "var(--neutral-10)" }}>Drive Smarter</h1>
         <Slogan>
           <em>How much faster can you get there and is it worth it?</em>
         </Slogan>
@@ -18,6 +18,6 @@ const Header = () => {
 export default Header;
 
 const Slogan = styled.h2`
-  color: #666;
+  color: var(--primary-10);
   font-size: 0.8rem;
 `;

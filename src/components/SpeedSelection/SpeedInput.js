@@ -1,7 +1,20 @@
 import React from "react";
+import { useRecoilValue } from "recoil";
+import { userConfigsState as configsAtom } from "../../utilities/recoilState";
 import { SliderContainer, SliderInput, NumberInput } from "../styled";
+import { createTickmarks } from "../../utilities/helperFunctions";
 
 const SpeedInput = ({ name, label, min, max, travelSpeed, setTravelSpeed }) => {
+  const userConfigs = useRecoilValue(configsAtom);
+
+  const mappedTickmarks = createTickmarks(
+    userConfigs.minSpeed,
+    userConfigs.maxSpeed,
+    10
+  ).map((value) => {
+    return <option key={value} value={value}></option>;
+  });
+
   return (
     <React.Fragment>
       <label htmlFor={name}>{label}</label>
@@ -11,26 +24,11 @@ const SpeedInput = ({ name, label, min, max, travelSpeed, setTravelSpeed }) => {
           name={name}
           min={min}
           max={max}
-          value={travelSpeed}
+          value={travelSpeed || 0}
           onChange={(e) => setTravelSpeed(e.target.value)}
           list="km/h"
         ></SliderInput>
-        <datalist id="km/h">
-          <option value="10"></option>
-          <option value="20"></option>
-          <option value="30"></option>
-          <option value="40"></option>
-          <option value="50"></option>
-          <option value="60"></option>
-          <option value="70"></option>
-          <option value="80"></option>
-          <option value="90"></option>
-          <option value="100"></option>
-          <option value="110"></option>
-          <option value="120"></option>
-          <option value="130"></option>
-          <option value="140"></option>
-        </datalist>
+        <datalist id="km/h">{mappedTickmarks}</datalist>
         <NumberInput
           type="number"
           value={travelSpeed}

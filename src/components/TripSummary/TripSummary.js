@@ -18,13 +18,6 @@ const TripSummary = () => {
 
   if (!travelSpeed1 || !travelSpeed2) {
     return null;
-  } else {
-    setTimeout(() => {
-      window.scroll({
-        top: 1000,
-        behavior: "smooth",
-      });
-    }, 200);
   }
 
   return (

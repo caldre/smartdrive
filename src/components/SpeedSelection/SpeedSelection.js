@@ -7,7 +7,7 @@ import {
   travelSpeedState2 as speedAtom2,
   travelDistanceState as distanceAtom,
 } from "../../utilities/recoilState";
-import { Card, ContentContainer, Title } from "../styled";
+import { Card, ContentContainer } from "../styled";
 import { cardTransition, variants } from "../../utilities/framerConfigs";
 import { useRecoilValue } from "recoil";
 
@@ -19,13 +19,6 @@ const SpeedSelection = () => {
 
   if (!distance) {
     return null;
-  } else {
-    setTimeout(() => {
-      window.scroll({
-        top: 1000,
-        behavior: "smooth",
-      });
-    }, 200);
   }
 
   return (
@@ -36,7 +29,6 @@ const SpeedSelection = () => {
       transition={cardTransition}
     >
       <ContentContainer>
-        <Title title="3. Step" />
         <SpeedInput
           name="trip1"
           label="Set travelling speed for Trip 1"

@@ -6,7 +6,7 @@ import {
 } from "../utilities/recoilState";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
-import { Card, ContentContainer, Title } from "./styled";
+import { Card, ContentContainer } from "./styled";
 import { cardTransition, variants } from "../utilities/framerConfigs";
 
 const VehicleSelection = () => {
@@ -44,7 +44,6 @@ const VehicleSelection = () => {
       transition={cardTransition}
     >
       <ContentContainer>
-        <Title title="1. Step" />
         <label htmlFor="car">Choose vehicle</label>
 
         <VehiclesContainer>{carOptionsRendered}</VehiclesContainer>
@@ -82,9 +81,9 @@ const RadioInput = styled(motion.input)`
   appearance: none;
   outline: none;
   cursor: pointer;
-  border: 2px solid var(--gradient-1);
+  border: 2px solid var(--neutral-3);
   border-radius: 0.25rem;
-  background-color: var(--disabled);
+  background-color: var(--neutral-10);
   color: black;
   font-size: 1.25rem;
 }
@@ -97,10 +96,8 @@ const RadioInput = styled(motion.input)`
 
   :checked {
   border: 0px solid black;
-  background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
-	color: #fff;
-	box-shadow: 0rem 0rem 0.25rem #0000002e;
-	text-shadow: 0.05rem 0.1rem 0rem #79485f7a;
+  background: linear-gradient(45deg, var(--neutral-4), var(--neutral-6));
+	color: var(--neutral-10);
   }
 `;
 

@@ -10,11 +10,11 @@ const TimeComparison = () => {
     computedValuesSelector
   );
 
-  const fasterTrip = (a, b) => {
-    if (a.travelTimeInMs < b.travelTimeInMs) {
-      return a;
-    } else if (a.travelTimeInMs > b.travelTimeInMs) {
-      return b;
+  const fasterTrip = (trip1, trip2) => {
+    if (trip1.travelTimeInMs < trip2.travelTimeInMs) {
+      return trip1;
+    } else if (trip1.travelTimeInMs > trip2.travelTimeInMs) {
+      return trip2;
     }
   };
 

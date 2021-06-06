@@ -34,7 +34,7 @@ const H3 = styled.h3``;
 
 const Stamp = styled.div`
 margin-top: 1rem;
-  color: #0A9928;
+  color: var(--support-1);
 	transform: rotate(-14deg);
   border-radius: 0.5rem;
 	font-size: 1rem;

@@ -10,11 +10,11 @@ const FuelComparison = () => {
     computedValuesSelector
   );
 
-  const lessFuelUsed = (a, b) => {
-    if (a.totalFuelConsumption < b.totalFuelConsumption) {
-      return a;
-    } else if (a.totalFuelConsumption > b.totalFuelConsumption) {
-      return b;
+  const lessFuelUsed = (trip1, trip2) => {
+    if (trip1.totalFuelConsumption < trip2.totalFuelConsumption) {
+      return trip1;
+    } else if (trip1.totalFuelConsumption > trip2.totalFuelConsumption) {
+      return trip2;
     }
   };
 

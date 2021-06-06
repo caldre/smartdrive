@@ -7,13 +7,13 @@ import {
 } from "../utilities/recoilState";
 import {
   Card,
-  Title,
   SliderContainer,
   SliderInput,
   NumberInput,
   ContentContainer,
 } from "./styled";
 import { cardTransition, variants } from "../utilities/framerConfigs";
+import { createTickmarks } from "../utilities/helperFunctions";
 
 const DistanceSelection = () => {
   const [travelDistance, setTravelDistance] = useRecoilState(distanceAtom);
@@ -22,12 +22,15 @@ const DistanceSelection = () => {
 
   if (!selectedCar) {
     return null;
-  } else {
-    window.scroll({
-      top: 1000,
-      behavior: "smooth",
-    });
   }
+
+  const mappedTickmarks = createTickmarks(
+    userConfigs.minDistance,
+    userConfigs.maxDistance,
+    100
+  ).map((value) => {
+    return <option key={value} value={value}></option>;
+  });
 
   return (
     <Card
@@ -37,7 +40,6 @@ const DistanceSelection = () => {
       transition={cardTransition}
     >
       <ContentContainer>
-        <Title title="2. Step" />
         <label htmlFor="distance">Set travelling distance</label>
 
         <SliderContainer>
@@ -46,23 +48,11 @@ const DistanceSelection = () => {
             name="distance"
             min={userConfigs.minDistance}
             max={userConfigs.maxDistance}
-            value={travelDistance}
+            value={travelDistance || 0}
             onChange={(e) => setTravelDistance(e.target.value)}
             list="km-ticks"
           ></SliderInput>
-          <datalist id="km-ticks">
-            <option value="1"></option>
-            <option value="100"></option>
-            <option value="200"></option>
-            <option value="300"></option>
-            <option value="400"></option>
-            <option value="500"></option>
-            <option value="600"></option>
-            <option value="700"></option>
-            <option value="800"></option>
-            <option value="900"></option>
-            <option value="1000"></option>
-          </datalist>
+          <datalist id="km-ticks">{mappedTickmarks}</datalist>
           <NumberInput
             type="number"
             value={travelDistance}

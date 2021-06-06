@@ -76,23 +76,6 @@ export const formatTime = (ms) => {
   }
 };
 
-// TERNARY JUNGLE AHEAD
-
-/* return
-  <span>
-    {months ? (
-      <span>{`${months} ${months === 1 ? "month" : "months"}`}</span>
-    ) : null}
-    {days ? <span>{`${days} ${days === 1 ? "day" : "days"}`}</span> : null}
-    {!months && hours ? <span>{`${hours}h`}</span> : null}
-    {!months && !days && minutes ? <span>{`${minutes}min`}</span> : null}
-    {!days && !hours && !minutes ? (
-      <span>{`${seconds} ${seconds === 1 ? "second" : "seconds"}`}</span>
-    ) : null}
-  </span>
-);
-}; */
-
 export const countLitersPer100km = (baseConsumption, fuelIncrement, speed) => {
   return (baseConsumption * Math.pow(fuelIncrement, speed - 1)).toFixed(2);
 };
@@ -108,3 +91,6 @@ export const countTotalFuelConsumed = (
     Math.pow(fuelIncrement, speed - 1)
   ).toFixed(2);
 };
+
+export const createTickmarks = (start, stop, step) =>
+  Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + i * step);

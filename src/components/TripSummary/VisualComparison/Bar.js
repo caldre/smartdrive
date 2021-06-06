@@ -45,14 +45,14 @@ const BarBorder = styled.div`
   justify-content: flex-end;
   height: 100px;
   width: 10px;
-  border: 1px solid #ccc;
+  border: thin solid #ccc;
   border-radius: 3px 3px 0 0;
 `;
 
 const BarValue = styled(motion.div)(
   {
     width: "10px",
-    background: "linear-gradient(45deg, var(--gradient-1), var(--gradient-2))",
+    background: "linear-gradient(45deg, var(--primary-1), var(--primary-6))",
   },
   (props) => ({ height: props.height })
 );

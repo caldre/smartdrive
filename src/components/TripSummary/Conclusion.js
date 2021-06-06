@@ -25,29 +25,25 @@ const Conclusion = () => {
       break;
   }
 
-  const conclusion = () => {
-    return fasterTrip.travelTimeInMs !== null ? (
-      <p>
-        <strong>Trip 2</strong> is faster by{" "}
-        <strong>
-          {formatTime(slowerTrip.travelTimeInMs - fasterTrip.travelTimeInMs)}
-        </strong>
-        , but{" "}
-        <strong>
-          {" "}
-          {(
-            fasterTrip.totalFuelConsumption - slowerTrip.totalFuelConsumption
-          ).toFixed(2)}
-          l
-        </strong>{" "}
-        more fuel is consumed.
-      </p>
-    ) : (
-      <p>Trips are identical.</p>
-    );
-  };
-
-  return conclusion();
+  return fasterTrip.travelTimeInMs !== null ? (
+    <p>
+      <strong>{fasterTrip.name}</strong> is faster by{" "}
+      <strong>
+        {formatTime(slowerTrip.travelTimeInMs - fasterTrip.travelTimeInMs)}
+      </strong>
+      , but{" "}
+      <strong>
+        {" "}
+        {(
+          fasterTrip.totalFuelConsumption - slowerTrip.totalFuelConsumption
+        ).toFixed(2)}
+        l
+      </strong>{" "}
+      more fuel is consumed.
+    </p>
+  ) : (
+    <p>Trips are identical.</p>
+  );
 };
 
 export default Conclusion;

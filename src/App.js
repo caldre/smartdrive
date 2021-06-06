@@ -22,10 +22,11 @@ const App = () => {
 
 const Container = styled.div`
   display: flex;
+  position: absolute;
   flex-direction: column;
   height: 100vh;
+  width: 100%;
   align-items: center;
-  background-image: linear-gradient(#fff, #eee);
 `;
 
 export default App;

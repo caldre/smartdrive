@@ -9,7 +9,7 @@ export const Card = styled(motion.div)`
   margin: 0.5rem 0;
   padding: 0.5rem 1rem;
   box-shadow: 2px 2px 10px #ccc;
-  background: rgb(255, 255, 255, 0.8);
+  background: white;
 `;
 
 export const ContentContainer = styled.div`
@@ -21,7 +21,6 @@ export const ContentContainer = styled.div`
 export const SliderContainer = styled.div`
   display: flex;
   flex-direction: row;
-  margin-bottom: 1rem;
 `;
 
 export const SliderInput = styled.input`

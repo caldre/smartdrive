@@ -21,7 +21,7 @@ const FullDetails = () => {
 
   return (
     <details>
-      <summary>See Full Details</summary>
+      <summary style={{ color: "var(--neutral-3)" }}>See Full Details</summary>
       <Table>
         <thead>
           <tr>
@@ -84,20 +84,20 @@ const Table = styled.table`
   cursor: default;
 
   tr:nth-of-type(even) {
-    background-color: #f2f2f2;
+    background-color: var(--neutral-10);
   }
 
   tr:hover {
-    background-color: #ddd;
+    background-color: var(--neutral-8);
   }
 `;
 
 const Th = styled.th`
-  background: var(--gradient-1);
+  background: var(--neutral-4);
   color: white;
   font-weight: normal;
   text-align: right;
-  padding: 0rem 1rem;
+  padding: 0rem 0.5rem;
 `;
 
 const Td = styled.td`
