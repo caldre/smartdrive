@@ -43,7 +43,13 @@ const VehicleSelection = () => {
       variants={variants}
       transition={cardTransition}
     >
-      <ContentContainer>
+      <ContentContainer
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          textAlign: "center",
+        }}
+      >
         <label htmlFor="car">Choose vehicle</label>
 
         <VehiclesContainer>{carOptionsRendered}</VehiclesContainer>
@@ -105,4 +111,5 @@ const RadioInput = styled(motion.input)`
 const Details = styled.span`
   font-size: 0.8rem;
   margin: 0rem 0.25rem;
+  text-align: center;
 `;

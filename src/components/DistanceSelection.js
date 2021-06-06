@@ -62,7 +62,7 @@ const DistanceSelection = () => {
             name="distance"
             placeholder={`${userConfigs.minDistance} - ${userConfigs.maxDistance}`}
           />
-          <span>km</span>
+          <span style={{ marginRight: "1rem" }}>km</span>
         </SliderContainer>
       </ContentContainer>
     </Card>
