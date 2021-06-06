@@ -4,7 +4,9 @@ import { Card, ContentContainer } from "./styled";
 
 const Header = () => {
   return (
-    <Card style={{ background: "var(--neutral-4)" }}>
+    <Card
+      style={{ background: "var(--neutral-4)", margin: "0", padding: "0 1rem" }}
+    >
       <ContentContainer>
         <h1 style={{ color: "var(--neutral-10)" }}>Drive Smarter</h1>
         <Slogan>
