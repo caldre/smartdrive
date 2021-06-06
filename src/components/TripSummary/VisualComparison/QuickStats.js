@@ -39,7 +39,7 @@ margin-top: 1rem;
   border-radius: 0.5rem;
 	font-size: 1rem;
 	font-weight: 700;
-	border: 0.2rem solid #555;
+	border: 0.3rem solid var(--support-1);
 	display: inline-block;
 	padding: 0.25rem 1rem;
 	text-transform: uppercase;
