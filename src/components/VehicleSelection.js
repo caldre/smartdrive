@@ -78,6 +78,7 @@ const RadioInput = styled(motion.input)`
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
   appearance: none;
   outline: none;
   cursor: pointer;
