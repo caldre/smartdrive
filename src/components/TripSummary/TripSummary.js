@@ -15,7 +15,19 @@ import {
 const TripSummary = () => {
   const travelSpeed1 = useRecoilValue(travelSpeedAtom1);
   const travelSpeed2 = useRecoilValue(travelSpeedAtom2);
-  return travelSpeed1 && travelSpeed2 ? (
+
+  if (!travelSpeed1 || !travelSpeed2) {
+    return null;
+  } else {
+    setTimeout(() => {
+      window.scroll({
+        top: 1000,
+        behavior: "smooth",
+      });
+    }, 200);
+  }
+
+  return (
     <Card
       initial="hidden"
       animate="visible"
@@ -31,7 +43,7 @@ const TripSummary = () => {
         <FullDetails />
       </ContentContainer>
     </Card>
-  ) : null;
+  );
 };
 
 export default TripSummary;

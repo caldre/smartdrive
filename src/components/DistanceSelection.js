@@ -22,6 +22,11 @@ const DistanceSelection = () => {
 
   if (!selectedCar) {
     return null;
+  } else {
+    window.scroll({
+      top: 1000,
+      behavior: "smooth",
+    });
   }
 
   return (

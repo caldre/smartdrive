@@ -19,6 +19,13 @@ const SpeedSelection = () => {
 
   if (!distance) {
     return null;
+  } else {
+    setTimeout(() => {
+      window.scroll({
+        top: 1000,
+        behavior: "smooth",
+      });
+    }, 200);
   }
 
   return (
