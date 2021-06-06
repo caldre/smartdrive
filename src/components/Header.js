@@ -10,7 +10,7 @@ const Header = () => {
       <ContentContainer>
         <h1 style={{ color: "var(--neutral-10)" }}>Drive Smarter</h1>
         <Slogan>
-          <em>How much faster can you get there and is it worth it?</em>
+          <em>How fast can you get there and is it worth it?</em>
         </Slogan>
       </ContentContainer>
     </Card>

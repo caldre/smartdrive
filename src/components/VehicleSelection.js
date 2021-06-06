@@ -31,7 +31,9 @@ const VehicleSelection = () => {
             damping: 30,
           }}
         ></RadioInput>
-        <Details>{car.baseConsumption}l/100km</Details>
+        <Details>
+          <strong>{car.baseConsumption}l</strong>/100km
+        </Details>
       </VehicleContainer>
     );
   });
