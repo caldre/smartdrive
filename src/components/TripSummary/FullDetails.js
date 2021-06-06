@@ -20,7 +20,7 @@ const FullDetails = () => {
   const { trip1, trip2 } = computedValues;
 
   return (
-    <details>
+    <details style={{ paddingBottom: "2rem" }}>
       <summary style={{ color: "var(--neutral-3)" }}>See Full Details</summary>
       <Table>
         <thead>

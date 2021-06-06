@@ -32,6 +32,7 @@ export const SliderInput = styled.input`
 export const NumberInput = styled.input`
   width: 4rem;
   border: 1px solid black;
+  border-radius: 0;
   border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
